@@ -23,16 +23,15 @@ aPagar = document.getElementById('a-pagar');
 let totalPropinas = 0;
 
 function calculateTips(porcentaje) {
-    return (total.value / personas.value) * (porcentaje / 100);
-    
+    return ((total.value / personas.value) * (porcentaje / 100)).toFixed(2);
 }
 
 function calculateTotal(porcentaje) {
-    return parseFloat(total.value) + (calculateTips(porcentaje) * personas.value)
+    return (parseFloat(total.value) + (calculateTips(porcentaje) * personas.value)).toFixed(2);
 }
 
 function setTotal(porcentaje) {
-    propina.innerHTML = `Cada persona deberá aportar $${calculateTips(porcentaje).toFixed(2)} para la propina`;
-    aPagar.innerHTML = `Total a pagar con propina: $${calculateTotal(porcentaje).toFixed(2)}`;
+    propina.innerHTML = `Cada persona deberá aportar $${calculateTips(porcentaje)} para la propina`;
+    aPagar.innerHTML = `Total a pagar con propina: $${calculateTotal(porcentaje)}`;
 }
 
