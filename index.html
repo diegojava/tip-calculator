@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Tip Calculator 🪙</title>
 </head>
 <body>
-    <script src="tip.js" type="text/javascript"></script>
+    <div class="contenedor-general">
+        <div class="title">
+            <h1>Tip Calculator 💵</h1>
+        </div>
+        <div class="contenedor-inputs">
+            <input type="number" placeholder="Total de la cuenta" id="total">
+            <input type="number" placeholder="Número de personas" id="personas">
+        </div>
+        <div class="contenedor-porcentaje">
+            <button id="10-100">10%</button>
+            <button id="15-100">15%</button>
+            <button id="20-100">20%</button>
+            <button id="30-100">30%</button>
+        </div>
+        <div class="totales">
+            <div class="propina" id="propina">
+                $0.00
+            </div>
+            <div class="a-pagar" id="a-pagar">
+                $0.00
+            </div>
+        </div>
+    </div>
+    <script src="js/tip.js" type="text/javascript"></script>
 </body>
 </html>
